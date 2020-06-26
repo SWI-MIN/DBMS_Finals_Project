@@ -1,3 +1,5 @@
+# 讀csv檔，並從中依條件搜尋，並列出該條件結果
+ 
 print ('1. 依學生學號 => input \"1\"')
 print ('2. 依課程代號 => input \"2\"')
 choose = input()
