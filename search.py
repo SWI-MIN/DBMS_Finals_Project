@@ -8,7 +8,7 @@ str = ''    # 紀錄所有字串
 count = 0   # 紀錄課程人數
 
 if choose == '1' :
-    with open('DB_students.csv', 'r') as fp:      # 開檔一次讀一行，把開啟讀到的檔案丟給fp
+    with open('shit.csv', 'r') as fp:      # 開檔一次讀一行，把開啟讀到的檔案丟給fp
         print ('輸入要查詢的學生 ID : ',end= '')
         stuid = input()
         while True:
@@ -18,7 +18,7 @@ if choose == '1' :
             if stuid in s:
                 str += s            # 把該行(s) 加入 str 中
 elif choose == '2' :
-    with open('DB_students.csv', 'r') as fp:    # 開檔一次讀一行
+    with open('shit.csv', 'r') as fp:    # 開檔一次讀一行
         print ('輸入要查詢的課程 ID : ',end= '')
         courseid = input()
         while True:
