@@ -5,7 +5,6 @@ print ('1. 依學生學號 => input \"1\"')
 print ('2. 依課程代號 => input \"2\"')
 choose = input()
 
-str = ''    # 紀錄所有字串
 count = 0   # 紀錄課程人數
 
 if choose == '1' :
@@ -17,7 +16,7 @@ if choose == '1' :
             if s == '':
                 break
             if stuid in s:
-                str += s            # 把該行(s) 加入 str 中
+                print(s,end= '')
 elif choose == '2' :
     # tracemalloc.start()          # 我們透過 start() 開始記憶體除錯的功能：
     with open('shit.csv', 'r') as fp:    # 開檔一次讀一行
@@ -30,13 +29,12 @@ elif choose == '2' :
                 break
             if s.endswith(courseid) == True:  # 從後面看有符合courseid，endswith(字符或字串, 開始位置, 結束位置)
                 s += '\n'       # 把 \n 加回來
-                str += s        # 把該行(s) 加入 str 中
+                print(s,end= '')
                 count+=1
     # snap = tracemalloc.take_snapshot()         # 想要記錄下當前的記憶體配置就使用 snapshot()：
 else :
     pass
 
-print(str)
 if count>1:
     print(count)
 
